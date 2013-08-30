@@ -1,0 +1,25 @@
+<%= form_for([@post, @comment], :remote=>true, :url=>new_comment_path(:post_id=>@post)) do |f| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% @comment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions span7">
+    Add Comment:<br/>
+    <%= f.text_field :content, :class=>"span12", :required=>true, :id=>"comment" %><br/>
+    <%= f.submit :class=>"pull-right", :id=>"add_comment" %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+
+  
+
+</script>

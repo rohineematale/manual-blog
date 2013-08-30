@@ -1,0 +1,26 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <div>
+      <%= f.label :title, "Title" %>
+      <%= f.text_field :title, :class=>"span10" %>
+    </div><br />    
+
+    <div>
+      <%= f.label :description, "Description" %>
+      <%= f.cktext_area :description, :ckeditor => {:uiColor => "#AADC6E", :toolbar => 'MyToolbar'} %>
+      <%#= f.text_area :description, :rows=>15, :class=>"span10" %>
+    </div><br />
+    <%= f.submit %>
+  </div>
+<% end %>

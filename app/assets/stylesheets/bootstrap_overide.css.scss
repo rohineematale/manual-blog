@@ -1,0 +1,23 @@
+@import "bootstrap";
+
+.alert-error {
+background-color: #f2dede;
+border-color: #eed3d7;
+color: #b94a48;
+margin-top: 50px;
+}
+
+.navbar-fixed-top, .navbar-fixed-bottom {
+/*position: absolute;*/
+right: 0;
+left: 0;
+z-index: 1030;
+margin-bottom: 0;
+}
+
+hr {
+margin: 20px 0;
+border: 0;
+border-top: 1px solid #615353;
+border-bottom: 1px solid white;
+}

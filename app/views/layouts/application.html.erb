@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Blog</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<header>
+	  <%= render 'menu' %>
+	</header>
+  <div class="container">
+    <div class="content">
+		  <div class="row-fluid">
+				<div class='row'>
+					<div class='span10 offset1'>
+					  <%= render 'notice' %>
+						<%= yield %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
